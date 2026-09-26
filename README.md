@@ -52,11 +52,11 @@ Les petits CNN sont comparés à leur dernière époque. Le CNN amélioré et le
 
 Le modèle amélioré possède **288 746 paramètres**. Chaque bloc comprend deux séquences convolution → BatchNorm → ReLU, puis un max pooling. La moyenne globale réduit les 128 cartes finales à 128 caractéristiques avant la classification.
 
-![Architecture du CNN personnel et dimensions des activations](figures/github_cnn_architecture.png)
+![Architecture du CNN personnel et dimensions des activations](figures/cnn_architecture.png)
 
 La diminution du taux d’apprentissage après dix époques améliore nettement la validation. La meilleure perte de validation est obtenue à l’époque 13.
 
-![Courbes de perte et d’accuracy du CNN personnel](figures/github_cnn_learning_curves.png)
+![Courbes de perte et d’accuracy du CNN personnel](figures/cnn_learning_curves.png)
 
 ### Transfert d’apprentissage
 
@@ -64,7 +64,7 @@ ResNet18 utilise les poids `IMAGENET1K_V1`. Son prétraitement redimensionne et 
 
 La première phase entraîne uniquement une nouvelle tête de classification de **5 130 paramètres**. La seconde adapte également `layer4`, avec un taux d’apprentissage réduit. Cette adaptation améliore la validation davantage que l’entraînement de la tête seule.
 
-![Courbes de perte et d’accuracy du fine-tuning de ResNet18](figures/github_resnet_finetuning_learning_curves.png)
+![Courbes de perte et d’accuracy du fine-tuning de ResNet18](figures/resnet_finetuning_learning_curves.png)
 
 ## Analyse des erreurs
 
@@ -72,11 +72,11 @@ Les deux matrices utilisent la même échelle. Les lignes correspondent aux clas
 
 | CNN personnel | ResNet18 fine-tuné |
 |---|---|
-| ![Matrice du CNN personnel](figures/github_cnn_confusion_matrix.png) | ![Matrice de ResNet18](figures/github_resnet_confusion_matrix.png) |
+| ![Matrice du CNN personnel](figures/cnn_confusion_matrix.png) | ![Matrice de ResNet18](figures/resnet_confusion_matrix.png) |
 
 Quelques erreurs sont affichées pour compléter les scores globaux. Ces huit premiers exemples ne constituent pas un échantillon représentatif et ne démontrent pas quels indices le réseau utilise.
 
-![Huit premières erreurs de ResNet18 sur le test](figures/github_resnet_errors.png)
+![Huit premières erreurs de ResNet18 sur le test](figures/resnet_errors.png)
 
 ## Utiliser le projet
 
