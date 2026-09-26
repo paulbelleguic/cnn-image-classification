@@ -1,0 +1,25 @@
+# Données et poids des modèles
+data/
+models/
+*.pth
+*.pt
+
+# Environnement Python
+.venv/
+venv/
+__pycache__/
+*.pyc
+
+# Fichiers temporaires des notebooks
+.ipynb_checkpoints/
+
+# Configuration locale et secrets
+.vscode/
+.env
+
+# Fichiers système
+.DS_Store
+Thumbs.db
+
+# Nouvelles expériences locales
+runs/

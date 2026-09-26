@@ -1,0 +1,17 @@
+{
+  "report_cells_executed": 18,
+  "schema_valid": true,
+  "training_run": false,
+  "validation_test_recomputed": true,
+  "test_cnn": {
+    "loss": 0.4159915761470795,
+    "accuracy": 0.8588,
+    "count": 10000
+  },
+  "test_resnet": {
+    "loss": 0.30176773210167884,
+    "accuracy": 0.9014,
+    "count": 10000
+  },
+  "synthetic_training_checks": "SmallCNN, ImprovedCNN, ResNet partial tuning passed; no saved weights modified"
+}
